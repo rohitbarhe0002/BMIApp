@@ -25,7 +25,7 @@ let history = useHistory();
     const date = bmiData.map(obj => obj.date);
     const bmi = bmiData.map(obj => obj.bmi);
     let newData = { date, bmi};
-   dispatch(setdata(newData))
+    dispatch(setdata(newData))
   }, [bmiData]);
 
   const handleChange = val => {
@@ -47,8 +47,7 @@ let history = useHistory();
     dispatch(storebmi(newState));
   };
 
-  const handleUndo = () => {
-
+ const handleUndo = () => {
     dispatch(storebmi(getData('lastState')));
   };
 
@@ -91,9 +90,8 @@ let history = useHistory();
                 Undo
               </button>
             </div>
-          ) : (
-              ''
-            )}
+          ) : ( '' )
+          }
         </div>
       </div>
     </div>
